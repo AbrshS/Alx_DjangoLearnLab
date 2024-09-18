@@ -19,7 +19,8 @@ urlpatterns = [
     path('post/new/', PostCreateView.as_view(), name='post-create'),  # Create a new post
     path('post/<int:pk>/update/', PostUpdateView.as_view(), name='post-update'),  # Update an existing post
     path('post/<int:pk>/delete/', PostDeleteView.as_view(), name='post-delete'),  # Delete a post
-    
+    "comment/<int:pk>/update/", "post/<int:pk>/comments/new/", "comment/<int:pk>/delete/"
+    "tags/<slug:tag_slug>/", "PostByTagListView.as_view()"
 ]
  
 
